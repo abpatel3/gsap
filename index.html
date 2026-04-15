@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/csss/style.css">
+
+</head>
+
+<body class="overflow-x-hidden">
+    <header id="header"
+        class="fixed top-0 left-0 right-0 z-1000 transition-all duration-300 bg-transparent border-b border-transparent">
+        <div id="header-container"
+            class="max-w-[1440px] mx-auto px-4 md:px-12 flex items-center justify-between transition-all duration-300"
+            style="height: 80px;">
+            <a class="group flex items-center gap-3 text-white transition-colors duration-500  header-logo "
+                href="index.html" data-discover="true">
+                <svg viewBox="0 0 100 100"
+                    class="w-10 h-10 transition-transform duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:rotate-180"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="5" y="5" width="42" height="42"></rect>
+                    <circle cx="74" cy="26" r="21"></circle>
+                    <path d="M47 74 A 21 21 0 0 1 5 74 L 5 74 Z" transform="rotate(-90 26 74) translate(21, 0)"></path>
+                    <path d="M47 53 V95 H5 C5 95 5 53 47 53 Z M 26 95 A 21 21 0 0 0 26 53 A 21 21 0 0 0 26 95"
+                        fill-rule="evenodd" fill="transparent"></path>
+                    <g>
+                        <rect x="0" y="0" width="48" height="48"></rect>
+                        <circle cx="74" cy="24" r="24"></circle>
+                        <path d="M24 52 A 24 24 0 0 0 24 100 V 52 Z"></path>
+                        <path d="M52 100 L76 52 L100 100 Z"></path>
+                    </g>
+                </svg>
+                <div class="flex flex-col"><span
+                        class="text-xl font-extrabold tracking-tighter leading-none uppercase origin-left ">Moca</span><span
+                        class="text-[10px] font-bold tracking-[0.2em] uppercase leading-none mt-0.5">Gandhinagar</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="about.html"
+                    class="text-sm font-medium text-white hover:text-gold! transition-colors ">About</a>
+                <a href="gallery.html"
+                    class="text-sm font-medium text-white hover:text-gold! transition-colors ">Gallery</a>
+                <a href="residency.html"
+                    class="text-sm font-medium text-white hover:text-gold! transition-colors ">Residency</a>
+                <a href="workshop.html"
+                    class="text-sm font-medium text-white hover:text-gold! transition-colors ">Workshops</a>
+                <a href="events.html"
+                    class="text-sm font-medium text-white hover:text-gold! transition-colors ">Events</a>
+                <a href="shop.html" class="text-sm font-medium text-white hover:text-gold! transition-colors ">Shop</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <button
+                    class="hidden lg:flex items-center gap-2 text-sm font-medium text-white hover:text-gold! cursor-pointer appointment-btn transition-colors">
+                    <span>Book Appointment</span>
+                </button>
+                <button
+                    class="bg-primary px-5 py-2.5 rounded-full text-sm font-medium hover:bg-gold! cursor-pointer flex items-center gap-2 text-white shadow-lg tickets-btn transition-colors">
+                    <span>Get Tickets</span>
+                    <i class="fas fa-arrow-right text-[10px]"></i>
+                </button>
+                <button id="mobile-menu-btn"
+                    class="md:hidden text-white hover:text-gold! cursor-pointer transition-colors p-2 z-50 ">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-primary h-screen z-60 translate-x-full transition-transform duration-500 ease-in-out md:hidden">
+            <div class="flex flex-col h-full p-8">
+                <div class="flex items-center justify-between mb-16">
+                    <div class="flex items-center gap-3 text-white mobile-menu-logo">
+                        <svg viewBox="0 0 100 100" class="w-8 h-8" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="5" y="5" width="42" height="42"></rect>
+                            <circle cx="74" cy="26" r="21"></circle>
+                            <path d="M47 74 A 21 21 0 0 1 5 74 L 5 74 Z" transform="rotate(-90 26 74) translate(21, 0)">
+                            </path>
+                            <path d="M47 53 V95 H5 C5 95 5 53 47 53 Z M 26 95 A 21 21 0 0 0 26 53 A 21 21 0 0 0 26 95"
+                                fill-rule="evenodd" fill="transparent"></path>
+                            <g>
+                                <rect x="0" y="0" width="48" height="48"></rect>
+                                <circle cx="74" cy="24" r="24"></circle>
+                                <path d="M24 52 A 24 24 0 0 0 24 100 V 52 Z"></path>
+                                <path d="M52 100 L76 52 L100 100 Z"></path>
+                            </g>
+                        </svg>
+                        <div class="flex flex-col">
+                            <span class="text-xl font-extrabold tracking-tighter leading-none uppercase">Moca</span>
+                            <span
+                                class="text-[8px] font-bold tracking-[0.2em] uppercase leading-none mt-0.5 opacity-70">Gandhinagar</span>
+                        </div>
+                    </div>
+                    <button id="close-menu-btn" class="text-white hover:text-gold transition-colors">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                <nav class="flex flex-col gap-8">
+                    <a href="about.html"
+                        class="text-4xl font-serif text-white! hover:text-gold! transition-colors">About</a>
+                    <a href="gallery.html"
+                        class="text-4xl font-serif text-white! hover:text-gold! transition-colors">Gallery</a>
+                    <a href="residency.html"
+                        class="text-4xl font-serif text-white! hover:text-gold! transition-colors">Residency</a>
+                    <a href="workshop.html"
+                        class="text-4xl font-serif text-white! hover:text-gold! transition-colors">Workshops</a>
+                    <a href="events.html"
+                        class="text-4xl font-serif text-white! hover:text-gold! transition-colors">Events</a>
+                    <a href="shop.html"
+                        class="text-4xl font-serif text-white! hover:text-gold! transition-colors">Shop</a>
+                </nav>
+                <div class="mt-auto pt-8 border-t border-white/10 flex flex-col gap-6">
+                    <button
+                        class="bg-gold hover:bg-surface hover:text-gold text-white px-8 py-4 rounded-full text-sm font-bold uppercase tracking-widest text-center shadow-gold/20 shadow-xl mobile-appointment-btn">
+                        Book Appointment
+                    </button>
+                    <div class="flex justify-center gap-6 mobile-social-links">
+                        <a href="#" class="hover:text-gold text-white/50"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="hover:text-gold text-white/50"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="hover:text-gold text-white/50"><i class="fab fa-vimeo-v text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="herosection bg-black">
+        <div class="hero-slider">
+            <div class="h-screen relative">
+                <div class="absolute h-full w-full top-0 left-0">
+                    <img class="w-full h-full object-cover opacity-60 animate-ken-burns" src="assets/img/hero-1.png"
+                        alt="Modern Gallery 2">
+                    <div class="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-60">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-linear-to-b from-black/50 via-transparent to-transparent opacity-80">
+                    </div>
+                </div>
+                <div class="relative max-w-[1440px] mx-auto px-6 lg:px-12 h-full flex flex-col justify-center py-24">
+                    <div class="max-w-3xl slide-content">
+                        <h1
+                            class="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] tracking-tight mb-6 hero-title">
+                            Experience Contemporary Art
+                        </h1>
+                        <p
+                            class="text-base md:text-xl text-white/80 font-light max-w-xl mb-10 leading-relaxed hero-description">
+                            Discover a curated collection of modern masterpieces in a space designed to inspire
+                            and provoke thought.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-4">
+                            <a href="#"
+                                class="bg-white text-primary px-8 py-4 rounded-full text-sm font-medium hover:bg-white/90 flex items-center gap-3 hero-btn">
+                                <span>Explore Gallery</span>
+                                <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <i class="text-xs fas fa-arrow-right"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="h-screen relative">
+                <div class="absolute h-full w-full top-0 left-0">
+                    <img class="w-full h-full object-cover opacity-60 animate-ken-burns" src="assets/img/hero-2.png"
+                        alt="Modern Gallery 2">
+                    <div class="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-60">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-linear-to-b from-black/50 via-transparent to-transparent opacity-80">
+                    </div>
+                </div>
+                <div class="relative max-w-[1440px] mx-auto px-6 lg:px-12 h-full flex flex-col justify-center py-24">
+                    <div class="max-w-3xl slide-content">
+                        <h1
+                            class="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-[1.1] tracking-tight mb-6 hero-title">
+                            Discover Digital Visions
+                        </h1>
+                        <p
+                            class="text-base md:text-xl text-white/80 font-light max-w-xl mb-10 leading-relaxed hero-description">
+                            Discover a curated collection of modern masterpieces in a space designed to inspire
+                            and provoke thought.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-4">
+                            <a href="#"
+                                class="bg-white text-primary px-8 py-4 rounded-full text-sm font-medium hover:bg-white/90 flex items-center gap-3 hero-btn">
+                                <span>Explore Gallery</span>
+                                <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <i class="text-xs fas fa-arrow-right"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div><!-- end .hero-slider -->
+    </section>
+    <div class="h-screen w-screen bg-blue-500"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+    <script src="test.js"></script>
+</body>
+
+</html>
