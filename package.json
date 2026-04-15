@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./assets/csss/input.css -o ./assets/csss/style.css --watch"
+    "dev": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/style.css --watch"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.2.2",
